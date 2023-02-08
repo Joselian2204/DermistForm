@@ -14,128 +14,151 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <nav>
+      <a href="" class="logo">
+        <img src="/assets/logo.png" alt="" />
+      </a>
+    </nav>
     <div class="container">
       <div class="row">
         <form>
-          <div class="form-group">
-            <label for="age">Edad</label>
-            <input
-              type="number"
-              class="form-control"
-              id="age"
-              aria-describedby="patientage"
-            />
-            <small id="patientage" class="form-text text-muted"
-              >Edad en años del paciente</small
-            >
+          <div class="form-row row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="idRegistro">ID</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="idRegistro"
+                      aria-describedby="id"
+                    />
+                    <small id="id" class="form-text text-muted"
+                      >Número de persona registrada</small
+                    >
+                  </div>
+              <div class="form-group">
+                <label for="age">Edad</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  aria-describedby="patientage"
+                />
+                <small id="patientage" class="form-text text-muted"
+                  >Edad en años del paciente</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="ocupation">Ocupación</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ocupation"
+                  aria-describedby="ocup"
+                />
+                <small id="ocup" class="form-text text-muted"
+                  >Ocupación actual del paciente</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="grade">Grado de Exposición Solar h/d</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="grade"
+                  aria-describedby="gradesolar"
+                />
+                <small id="gradesolar" class="form-text text-muted"
+                  >Se mide en horas por dia</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="topography">Topografía de la Lesión</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="topography"
+                  aria-describedby="topo"
+                />
+                <small id="topo" class="form-text text-muted"
+                  >frente / mejilla / nariz / pomulo / mandibula / labios / Otro
+                  Especificar</small
+                >
+              </div>
+
+              <select class="custom-select mr-sm-2" id="gender">
+                <option selected>Genero...</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="asoc1">Sintoma Asociado 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="asoc1"
+                  aria-describedby="asociado1"
+                  value="ninguno"
+                />
+                <small id="asociado1" class="form-text text-muted"
+                  >Sintoma Asociado 1 (Si no tiene, mantener "ninguno")</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="asoc2">Sintoma Asociado 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="asoc2"
+                  aria-describedby="asociado2"
+                  value="ninguno"
+                />
+                <small id="asociado2" class="form-text text-muted"
+                  >Sintoma Asociado 2 (Si no tiene, mantener "ninguno")</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="asoc1">Sintoma Asociado 3</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="asoc3"
+                  aria-describedby="asociado3"
+                  value="ninguno"
+                />
+                <small id="asociado3" class="form-text text-muted"
+                  >Sintoma Asociado 3 (Si no tiene, mantener "ninguno")</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="asoc4">Sintoma Asociado 4</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="asoc4"
+                  aria-describedby="asociado4"
+                  value="ninguno"
+                />
+                <small id="asociado4" class="form-text text-muted"
+                  >Sintoma Asociado 4 (Si no tiene, mantener "ninguno")</small
+                >
+              </div>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="ocupation">Ocupación</label>
-            <input
-              type="text"
-              class="form-control"
-              id="ocupation"
-              aria-describedby="ocup"
-            />
-            <small id="ocup" class="form-text text-muted"
-              >Ocupación actual del paciente</small
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="grade">Grado de Exposición Solar h/d</label>
-            <input
-              type="number"
-              class="form-control"
-              id="grade"
-              aria-describedby="gradesolar"
-            />
-            <small id="gradesolar" class="form-text text-muted"
-              >Se mide en horas por dia</small
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="topography">Topografía de la Lesión</label>
-            <input
-              type="text"
-              class="form-control"
-              id="topography"
-              aria-describedby="topo"
-            />
-            <small id="topo" class="form-text text-muted"
-              >Frente / Mejilla / Nariz / Pomulo / Mandibula / Labios / Otro
-              Especificar</small
-            >
-          </div>
-
-          <select class="custom-select mr-sm-2" id="gender">
-            <option selected>Genero...</option>
-            <option value="male">Masculino</option>
-            <option value="female">Femenino</option>
-          </select>
-
-          <div class="form-group">
-            <label for="asoc1">Sintoma Asociado 1</label>
-            <input
-              type="text"
-              class="form-control"
-              id="asoc1"
-              aria-describedby="asociado1"
-              value="ninguno"
-            />
-            <small id="asociado1" class="form-text text-muted"
-              >Sintoma Asociado 1 (Si no tiene, escribir "ninguno")</small
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="asoc2">Sintoma Asociado 2</label>
-            <input
-              type="text"
-              class="form-control"
-              id="asoc2"
-              aria-describedby="asociado2"
-              value="ninguno"
-            />
-            <small id="asociado2" class="form-text text-muted"
-              >Sintoma Asociado 2 (Si no tiene, escribir "ninguno")</small
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="asoc1">Sintoma Asociado 3</label>
-            <input
-              type="text"
-              class="form-control"
-              id="asoc3"
-              aria-describedby="asociado3"
-              value="ninguno"
-            />
-            <small id="asociado3" class="form-text text-muted"
-              >Sintoma Asociado 3 (Si no tiene, escribir "ninguno")</small
-            >
-          </div>
-
-          <div class="form-group">
-            <label for="asoc4">Sintoma Asociado 4</label>
-            <input
-              type="text"
-              class="form-control"
-              id="asoc4"
-              aria-describedby="asociado4"
-              value="ninguno"
-            />
-            <small id="asociado4" class="form-text text-muted"
-              >Sintoma Asociado 4 (Si no tiene, escribir "ninguno")</small
-            >
-          </div>
-
-          <a href="#" class="btn btn-success" onclick="save()">Registrar</a>
         </form>
       </div>
     </div>
+    <div class="buttoncontainer">
+        <a href="#" class="mybutton" onclick="save()">Registrar</a>
+      </div>
   </body>
 
   <!-- Bootstrap -->

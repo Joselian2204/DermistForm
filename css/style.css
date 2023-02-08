@@ -1,0 +1,77 @@
+:root{
+    --primary: rgba(22,58,95,1);
+    --secondary: rgba(29,96,110);
+    --accent: rgba(227,246,245,1);
+    --white: rgba(255,255,255,1);
+    --green: rgba(69,235,165,1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+}
+
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 100px;
+    background-color: var(--primary);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+nav .logo{
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+nav .logo img{
+    width: 70%;
+}
+
+.container{
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttoncontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.mybutton{
+    background-color: var(--green);
+    color: var(--primary);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 54%;
+    text-align: center;
+}
+
+.mybutton:hover{
+    text-decoration: none;
+    color: var(--primary);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+label{
+    color: var(--primary);
+}

@@ -1,5 +1,6 @@
 function save(){
     db.collection("patient").add({
+        id: document.getElementById("idRegistro").value,
         age: document.getElementById("age").value,
         ocupation: document.getElementById("ocupation").value,
         solarGrade: document.getElementById("grade").value,
