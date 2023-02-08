@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dermist</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <form>
+          <div class="form-group">
+            <label for="age">Edad</label>
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              aria-describedby="patientage"
+            />
+            <small id="patientage" class="form-text text-muted"
+              >Edad en años del paciente</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="ocupation">Ocupación</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ocupation"
+              aria-describedby="ocup"
+            />
+            <small id="ocup" class="form-text text-muted"
+              >Ocupación actual del paciente</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grado de Exposición Solar h/d</label>
+            <input
+              type="number"
+              class="form-control"
+              id="grade"
+              aria-describedby="gradesolar"
+            />
+            <small id="gradesolar" class="form-text text-muted"
+              >Se mide en horas por dia</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="topography">Topografía de la Lesión</label>
+            <input
+              type="text"
+              class="form-control"
+              id="topography"
+              aria-describedby="topo"
+            />
+            <small id="topo" class="form-text text-muted"
+              >Frente / Mejilla / Nariz / Pomulo / Mandibula / Labios / Otro
+              Especificar</small
+            >
+          </div>
+
+          <select class="custom-select mr-sm-2" id="gender">
+            <option selected>Genero...</option>
+            <option value="male">Masculino</option>
+            <option value="female">Femenino</option>
+          </select>
+
+          <div class="form-group">
+            <label for="asoc1">Sintoma Asociado 1</label>
+            <input
+              type="text"
+              class="form-control"
+              id="asoc1"
+              aria-describedby="asociado1"
+              value="ninguno"
+            />
+            <small id="asociado1" class="form-text text-muted"
+              >Sintoma Asociado 1 (Si no tiene, escribir "ninguno")</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="asoc2">Sintoma Asociado 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="asoc2"
+              aria-describedby="asociado2"
+              value="ninguno"
+            />
+            <small id="asociado2" class="form-text text-muted"
+              >Sintoma Asociado 2 (Si no tiene, escribir "ninguno")</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="asoc1">Sintoma Asociado 3</label>
+            <input
+              type="text"
+              class="form-control"
+              id="asoc3"
+              aria-describedby="asociado3"
+              value="ninguno"
+            />
+            <small id="asociado3" class="form-text text-muted"
+              >Sintoma Asociado 3 (Si no tiene, escribir "ninguno")</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="asoc4">Sintoma Asociado 4</label>
+            <input
+              type="text"
+              class="form-control"
+              id="asoc4"
+              aria-describedby="asociado4"
+              value="ninguno"
+            />
+            <small id="asociado4" class="form-text text-muted"
+              >Sintoma Asociado 4 (Si no tiene, escribir "ninguno")</small
+            >
+          </div>
+
+          <a href="#" class="btn btn-success" onclick="save()">Registrar</a>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <!-- Bootstrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- Propietary -->
+  <script src="/js/config.js"></script>
+  <script src="/js/save.js"></script>
+  <script src="/js/view.js"></script>
 </html>
